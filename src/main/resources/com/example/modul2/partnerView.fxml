@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="10" style="-fx-background-color: #F4E8D3;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.modul2.controller.PartnerController">
+
+    <Label style="-fx-font-size: 18px;" text="Partner Management System" textAlignment="CENTER" textFill="#67ba80">
+      <graphic>
+         <ImageView fitHeight="29.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@icon.png" />
+            </image>
+         </ImageView>
+      </graphic></Label>
+
+    <ListView fx:id="partnerListView" prefWidth="467.0" />
+
+    <!-- Добавленный текст "Add New Partner" -->
+    <Label style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #67ba80;" text="Add New Partner" />
+
+    <GridPane hgap="10" vgap="10">
+        <TextField fx:id="idField" promptText="ID" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="titleField" promptText="Title" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <TextField fx:id="fullNameField" promptText="Full Name" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+        <TextField fx:id="emailField" promptText="Email" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="phoneField" promptText="Phone" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextField fx:id="addressField" promptText="Address" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <TextField fx:id="innField" promptText="INN" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField fx:id="ratingField" promptText="Rating" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <!-- Изменено: выпадающий список для выбора product_type -->
+        <ComboBox fx:id="typeComboBox" promptText="Select Partner Type" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+
+
+        <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+    </GridPane>
+
+    <HBox spacing="10">
+        <Button onAction="#handleAddPartner" style="-fx-background-color: #67BA80;" text="Add" />
+        <Button fx:id="historyButton" mnemonicParsing="false" onMouseClicked="#toHisotryEvent" text="To history" />
+    </HBox>
+</VBox>

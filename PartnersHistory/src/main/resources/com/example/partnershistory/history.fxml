@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="530.0" style="-fx-background-color: #F4E8D3;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.partnershistory.controller.HistoryController">
+   <children>
+      <TableView fx:id="historySale" layoutX="-5.0" layoutY="128.0" prefHeight="492.0" prefWidth="536.0">
+        <columns>
+            <TableColumn fx:id="idHistorySale" text="History Sale ID" />
+            <TableColumn fx:id="partnerName" text="Partner" />
+            <TableColumn fx:id="productName" text="Product" />
+            <TableColumn fx:id="saleDate" text="Sale Date" />
+            <TableColumn fx:id="productCount" text="Product Count" />
+        </columns>
+      </TableView>
+      <Button fx:id="backButton" layoutX="14.0" layoutY="637.0" mnemonicParsing="false" onMouseClicked="#backEvent" prefHeight="25.0" prefWidth="81.0" style="-fx-background-color: #67BA80;" text="back" textFill="WHITE" />
+      <Label layoutX="199.0" layoutY="26.0" text="History sale">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="partnersCombobox" layoutX="20.0" layoutY="92.0" prefWidth="150.0" promptText="partners" style="-fx-background-color: #fff;" />
+      <Button fx:id="findButton" layoutX="193.0" layoutY="92.0" mnemonicParsing="false" onMouseClicked="#findEvent" style="-fx-background-color: #ffff;" text="find" />
+   </children>
+</AnchorPane>
